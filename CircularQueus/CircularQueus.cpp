@@ -39,10 +39,18 @@ public:
 
 	void remove() {
 		//Cek apakah antrian kosong
-		if()
+		if (FRONT == -1) {
+			cout << "Queue underflow\n";
+			return;
+		}
+		cout << "\nThe element deleted from the queue is : " << queue_array[FRONT] << "\n";
+
+		//Cek jika antrian hanya memiliki satu elemen
+		if (FRONT == max - 1)
+			FRONT = 0;
+		else
+			FRONT = FRONT + 1;
 	}
-
-
 };
 
 int main(){
